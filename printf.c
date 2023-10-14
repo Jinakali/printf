@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 	fmt conversion[] = {
 	{'c', print_c},
 	{'s', print_s},
-	{'%', print_p},
 	{'\0', NULL}
 	};
 

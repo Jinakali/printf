@@ -51,13 +51,3 @@ int print_s(va_list arg)
 	}
 	return (_putstring(s));
 }
-/**
- *print_p - write out '%'
- *@arg: unused parameter
- *Return:1 always
- */
-int print_p(va_list arg)
-{
-	(void) arg;
-	return (_putchar('%'));
-}
