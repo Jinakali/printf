@@ -4,9 +4,9 @@ _printf is a function that produces output according to a format.
 
 
 ## Installation
-###_printf
+### _printf
 Copy files to you computer and call the functions.
-###man page
+### man page
 sudo cp _printf.1 /usr/share/man/man1/
 sudo mandb 
 
