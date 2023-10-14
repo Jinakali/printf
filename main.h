@@ -3,15 +3,19 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
-int _printf(const char *format, ...);
 /**
 *struct format - structure of string of format specifiers and pointers to print
 *@f:format specifier
 *@func:pointer to functions that will print according to the specifier 
 */
-typdef struct format{
-char s;
-char f;
-int (*func)(va_list args);
-} fmt;
+typedef struct format{
+	char f;
+	int (*func)(va_list args);
+}fmt;
+int _printf(const char *format, ...);
+int _putchar(char c);
+int print_c(va_list arg);
+int print_s(va_list arg);
+int print_p(va_list arg);
+int _putstring(char *s);
 #endif /*main.h*/
