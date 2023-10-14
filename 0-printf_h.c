@@ -46,7 +46,8 @@ int print_s(va_list arg)
 
 	if (s == NULL)
 	{
-		return (0);
+		_putstring("(nil)");
+		return (-1);
 	}
 	return (_putstring(s));
 }
