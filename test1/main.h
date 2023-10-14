@@ -15,4 +15,7 @@ typedef struct format{
 int _printf(const char *format, ...);
 int _putchar(char c);
 int print_c(va_list arg);
+int print_s(va_list arg);
+int print_p(va_list arg);
+int _putstring(char *s);
 #endif /*main.h*/
