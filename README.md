@@ -7,8 +7,8 @@ _printf is a function that produces output according to a format.
 ### _printf
 Copy files to you computer and call the functions.
 ### man page
-sudo cp _printf.1 /usr/share/man/man1/
-sudo mandb 
+* sudo cp _printf.1 /usr/share/man/man1/
+* sudo mandb 
 
 ## Usage
 
