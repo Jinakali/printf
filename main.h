@@ -19,4 +19,6 @@ int print_c(va_list arg);
 int print_s(va_list arg);
 int print_p(va_list arg);
 int _putstring(char *s);
+int print_i_d(va_list arg);
+int print_number(int n);
 #endif /*main.h*/
