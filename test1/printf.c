@@ -12,6 +12,8 @@ int _printf(const char *format, ...)
 	/*array of struct with format characters and associated functions*/
 	fmt conversion[] = {
 	{'c', print_c},
+	{'s', print_s},
+	{'%', print_p},
 	{'\0', NULL}
 	};
 
