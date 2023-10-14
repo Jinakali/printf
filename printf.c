@@ -9,7 +9,7 @@ int _printf(const char *format, ...)
 	int i, j, sum = 0, num1_chars = 0, num2_chars = 0;
 	va_list par;
 
-	if (format == NULL || (format[0] == '%' && !format[1]))
+	if (format == NULL)
 		return (-1);
 
 
