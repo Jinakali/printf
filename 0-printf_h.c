@@ -51,3 +51,16 @@ int print_s(va_list arg)
 	}
 	return (_putstring(s));
 }
+
+/**
+ * print_p - prints out %
+ * @args: arg to be printed out
+ * Return: no of char printed out
+ */
+
+int print_p(va_list arg)
+{
+	(void) arg;
+	_putchar('%');
+	return (1);
+}
