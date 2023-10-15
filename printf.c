@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, j, sum = 0, num1_chars = 0, num2_chars = 0;
+	int i, j, no_chars = 0;
 	va_list par;
 	fmt conversion[] = {
 		{'c', print_c},
@@ -17,30 +17,29 @@ int _printf(const char *format, ...)
 		{'\0', NULL}
 	};
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (1);
+	if (format == NULL || (format[0] == '%' && format[1] == '\0')
+|| format[0] == '\0')
+		return (-1);
 	va_start(par, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
-		{
-			num2_chars = write(2, &format[i], 1);
-			sum += num2_chars;
-		}
+			no_chars += write(2, &format[i], 1);
+		if (format[i + 1] == '\0')
+			return (-1);
 		while (format[i] == '%')
 		{
 			for (j = 0; conversion[j].f != '\0'; j++)
 			{
 				if (conversion[j].f == format[i + 1])
 				{
-					num1_chars = conversion[j].func(par);
+					no_chars += conversion[j].func(par);
 					i = i + 1;/*skip format apecifier*/
-					sum += num1_chars;
 					break;
 				}
 			}
 		}
 	}
 	va_end(par);
-	return (sum);
+	return (no_chars);
 }
