@@ -8,9 +8,6 @@ int _printf(const char *format, ...)
 {
 	int i, j, sum = 0, num1_chars = 0, num2_chars = 0;
 	va_list par;
-
-	if (format == NULL)
-		return (-1);
 	fmt conversion[] = {
 		{'c', print_c},
 		{'s', print_s},
@@ -19,8 +16,11 @@ int _printf(const char *format, ...)
 		{'d', print_i_d},
 		{'\0', NULL}
 	};
+
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		return (1);
 	va_start(par, format);
-	for (i = 0; format != NULL && format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 		{
