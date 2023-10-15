@@ -46,21 +46,17 @@ int print_s(va_list arg)
 
 	if (s == NULL)
 	{
-		_putstring("(nil)");
-		return (-1);
+		return (0);
 	}
 	return (_putstring(s));
 }
-
 /**
- * print_p - prints out %
- * @args: arg to be printed out
- * Return: no of char printed out
+ *print_p - write out '%'
+ *@arg: unused parameter
+ *Return:1 always
  */
-
 int print_p(va_list arg)
 {
 	(void) arg;
-	_putchar('%');
-	return (1);
+	return (_putchar('%'));
 }
