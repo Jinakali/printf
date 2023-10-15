@@ -9,6 +9,8 @@ int _printf(const char *format, ...)
 	int i, j, sum = 0, num1_chars = 0, num2_chars = 0;
 	va_list par;
 
+	if (format == NULL)
+		return (-1);
 	fmt conversion[] = {
 		{'c', print_c},
 		{'s', print_s},
