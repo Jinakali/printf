@@ -12,6 +12,10 @@ int (*get_con(char c))(va_list)
 		{'%', print_p},
 		{'i', print_i_d},
 		{'d', print_i_d},
+		{'u', print_u},
+		{'o', print_o},
+		{'x', print_x},
+		{'X', print_X},
 		{'\0', NULL}
 	};
 	int j;
