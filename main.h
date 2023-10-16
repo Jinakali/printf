@@ -22,4 +22,8 @@ int _putstring(char *s);
 int print_i_d(va_list arg);
 int print_number(int n);
 int (*get_con(char c))(va_list);
+int print_u(va_list arg);
+int print_o(va_list arg);
+int print_x(va_list arg);
+int print_X(va_list arg);
 #endif /*main.h*/
