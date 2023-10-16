@@ -1,50 +1,47 @@
 #include "main.h"
-
 /**
- * _printf - prints output according to a format
- * @format: format string
- *
- * Return: the number of characters printed
+ *_printf-produces output according to a format
+ *@format:character string
+ *Return:number of characters printed except null byte
  */
-
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int count = 0;
-	int i;
-
-	fmt specs[] = 
-	{
-		{'c', print_char},
-		{'s', print_str},
-		{'%', print_percent},
+	int i, j, no_chars = 0;
+	va_list par;
+	fmt conversion[] = {
+		{'u', print_u},
+		{'o', print_o},
+		{'x', print_x},
+		{'X', print_X},
 		{'\0', NULL}
 	};
 
-	va_start(args, format);
-
-	while (*format)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0')
+|| format[0] == '\0')
+		return (-1);
+	va_start(par, format);
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (*format == '%')
+		if (format[i] != '%')
 		{
-			format++;
-			for (i = 0; specs[i].f != '\0'; i++)
+			no_chars += write(2, &format[i], 1);
+			continue;/*skip to the next character*/
+		}
+		if (format[i + 1] == '\0')
+			return (-1);
+		while (format[i] == '%')
+		{
+			for (j = 0; conversion[j].f != '\0'; j++)
 			{
-				if (*format == specs[i].f)
+				if (conversion[j].f == format[i + 1])
 				{
-					count += specs[i].func(args);
+					no_chars += conversion[j].func(par);
+					i = i + 1;/*skip format apecifier*/
 					break;
 				}
 			}
 		}
-		else
-		{
-			_putchar(*format);
-			count++;
-		}
-		format++;
 	}
-	
-	va_end(args);
-	return count;
+	va_end(par);
+	return (no_chars);
 }

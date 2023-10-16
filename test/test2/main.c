@@ -9,11 +9,15 @@
  */
 int main(void)
 {
-	int len;
-	int len2;
- 	len = _printf("Character:[%c]\n", 'H');
-  	len2 = printf("Character:[%c]\n", 'H');
-	printf("Len:[%d]\n", len);
-    	printf("Len:[%d]\n", len2);
-	return (0);
+    unsigned long int ui;
+
+    ui = (unsigned long int)INT_MAX + 1024;
+    _printf("Unsigned:[%u]\n", ui);
+    printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    return (0);
 }
+
