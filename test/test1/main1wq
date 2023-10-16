@@ -37,6 +37,7 @@ int main(void)
 
    _printf("String:[%s%s]\n", "I am a string !", "second string !");
     printf("String:[%s %s]\n", "I am a string !", "second string !");
-
+	_printf("String:%");
+	printf("String:%");
     return (0);
 }
