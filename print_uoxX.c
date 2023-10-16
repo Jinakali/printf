@@ -2,25 +2,6 @@
 #include <stdio.h>
 
 /**
- * _putstring- writes strins to stdout
- * @s:string
- *
- * Return:no of characters printed out
- */
-
-int _putstring(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		_putchar(s[i]);
-		i++;
-	}
-	return (i);
-}
-
-/**
  * print_u - prints an unsigned int
  * @arg: argument
  * Return: number of characters printed
