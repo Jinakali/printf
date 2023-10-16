@@ -21,4 +21,5 @@ int print_p(va_list arg);
 int _putstring(char *s);
 int print_i_d(va_list arg);
 int print_number(int n);
+int (*get_con(char c))(va_list);
 #endif /*main.h*/
