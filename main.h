@@ -30,7 +30,6 @@ int print_binary(unsigned int b);
 int print_b(va_list arg);
 int print_u_number(unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
-<<<<<<< HEAD
 int rev_string(char *s);
 int _strlen(char *s);
 int print_r(va_list arg);
@@ -40,6 +39,4 @@ int print_R(va_list arg);
 char *rot13(char *str);
 int print_px(unsigned long int);
 int print_ptr(va_list arg);
-=======
->>>>>>> ef1bc6ebff060648a5aa82046da3c42a6279106b
 #endif /*main.h*/
