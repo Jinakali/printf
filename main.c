@@ -143,5 +143,27 @@ int main(void)
     _printf("%b\n",32768);
     _printf("%b\n",5);
 
+    _printf("Decimal %d in Octal: %o\n", 42, 42);
+    printf("Decimal %d in Octal: %o\n", 42, 42);
+    _printf("Decimal %d in Hex (lowercase): %x\n", 255, 255);
+    printf("Decimal %d in Hex (lowercase): %x\n", 255, 255);
+    _printf("Decimal %d in Hex (lowercase): %x\n", 255, 255);
+    printf("Decimal %d in Hex (lowercase): %x\n", 255, 255);
+    _printf("Decimal %d in Hex (uppercase): %X\n", 65535, 65535);
+    printf("Decimal %d in Hex (uppercase): %X\n", 65535, 65535);
+    _printf("Unsigned Decimal %u\n", 12345);
+    printf("Unsigned Decimal %u\n", 12345);
+    _printf("Octal %o in Decimal: %d\n", 075, 075);
+    printf("Octal %o in Decimal: %d\n", 075, 075);
+    _printf("Octal %o in Hex (lowercase): %x\n", 036, 036);
+    printf("Octal %o in Hex (lowercase): %x\n", 036, 036);
+    _printf("Hex %x in Octal: %o\n", 0xAB, 0xAB);
+    printf("Hex %x in Octal: %o\n", 0xAB, 0xAB);
+    _printf("Hex %X in Decimal: %d\n", 0x7FF, 0x7FF);
+	printf("Hex %X in Decimal: %d\n", 0x7FF, 0x7FF);
+_printf("Large Unsigned Decimal %u\n", 4294967295U);
+printf("Large Unsigned Decimal %u\n", 4294967295U);
+_printf("Mixing Format Specifiers: Decimal %d, Octal %o, Hex %X, Unsigned Decimal %u\n", 42, 075, 0xABC, 12345);
+printf("Mixing Format Specifiers: Decimal %d, Octal %o, Hex %X, Unsigned Decimal %u\n", 42, 075, 0xABC, 12345);
     return (0);
 }

@@ -28,4 +28,6 @@ int print_x(va_list arg);
 int print_X(va_list arg);
 int print_binary(unsigned int b);
 int print_b(va_list arg);
+int print_u_number(unsigned int n);
+void *_calloc(unsigned int nmemb, unsigned int size);
 #endif /*main.h*/
