@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-  *print_p-The void * pointer argument is printed in hexadecimal
+  *print_ptr-The void * pointer argument is printed in hexadecimal
   *@arg:to convert to void * pointer
   *Return:no of chars printed out
   */
@@ -21,7 +21,7 @@ int print_ptr(va_list arg)
 }
 /**
  *print_px-print hexadecimal address
- *@p: any pointer variable
+ *@n: any pointer variable
  *Return:no of chars printed out
  */
 int print_px(unsigned long int n)

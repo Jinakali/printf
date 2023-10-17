@@ -39,4 +39,7 @@ int print_R(va_list arg);
 char *rot13(char *str);
 int print_px(unsigned long int);
 int print_ptr(va_list arg);
+int print_S(va_list arg);
+int _putstring_non_print(char *s);
+int print_X_S(char c);
 #endif /*main.h*/

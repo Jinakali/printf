@@ -20,6 +20,7 @@ int (*get_con(char c))(va_list)
 		{'r', print_r},
 		{'R', print_R},
 		{'p', print_ptr},
+		{'S', print_S},
 		{'\0', NULL}
 	};
 	int j;
