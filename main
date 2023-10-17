@@ -165,5 +165,7 @@ _printf("Large Unsigned Decimal %u\n", 4294967295U);
 printf("Large Unsigned Decimal %u\n", 4294967295U);
 _printf("Mixing Format Specifiers: Decimal %d, Octal %o, Hex %X, Unsigned Decimal %u\n", 42, 075, 0xABC, 12345);
 printf("Mixing Format Specifiers: Decimal %d, Octal %o, Hex %X, Unsigned Decimal %u\n", 42, 075, 0xABC, 12345);
-    return (0);
+   _printf("%r\n", "water");   
+   _printf("%R\n", "water");
+return (0);
 }
