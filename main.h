@@ -3,6 +3,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 /**
 *struct format - structure of string of format specifiers and pointers to print
 *@f:format specifier
