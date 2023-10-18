@@ -72,7 +72,7 @@ int print_r(va_list arg)
 	{
 		s1 = _strdup(s);
 		if (s1 == NULL)
-			return (NULL);
+			return (-1);
 		return (rev_string(s1));
 	}
 }
