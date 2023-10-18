@@ -45,6 +45,8 @@ int _printf(const char *format, ...)
 	int i, no_chars_writ = 0;
 	va_list par;
 
+	if (format == NULL)
+		return (-1);
 	va_start(par, format);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
