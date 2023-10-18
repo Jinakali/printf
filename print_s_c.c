@@ -24,6 +24,7 @@ int _putstring(char *s)
 		_putchar(s[i]);
 		i++;
 	}
+	free(s);
 	return (i);
 }
 /**
@@ -42,13 +43,12 @@ int print_c(va_list arg)
  */
 int print_s(va_list arg)
 {
-	char *s = va_arg(arg, char *);
+	char *s = va_arg(arg, char *), *s1;
 
 	if (s == NULL)
-	{
 		return (_putstring("(null)"));
-	}
-	return (_putstring(s));
+	s1 = _strdup(s);
+	return (_putstring(s1));
 }
 /**
  *print_p - write out '%'
