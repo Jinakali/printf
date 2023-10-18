@@ -71,6 +71,8 @@ int print_r(va_list arg)
 	else
 	{
 		s1 = _strdup(s);
+		if (s1 == NULL)
+			return (NULL);
 		return (rev_string(s1));
 	}
 }
