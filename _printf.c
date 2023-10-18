@@ -50,7 +50,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			no_chars_writ += write(2, &format[i], 1);
+			no_chars_writ += _putchar(format[i]);
 		}
 		while (format[i] == '%')
 		{
