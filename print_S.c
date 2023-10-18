@@ -32,7 +32,7 @@ int _putstring_non_print(char *s)
 			_putchar('\\');
 			_putchar('x');
 			print_X_S(s[i]);
-			count = i + 4;
+			count += 4;
 		}
 		else
 		{
