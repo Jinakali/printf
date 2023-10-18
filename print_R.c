@@ -41,6 +41,8 @@ int print_R(va_list arg)
 	else
 	{
 		s1 = _strdup(s);
+		if (s1 == NULL)
+			return (-1);
 		l = _putstring(rot13(s1));
 		free(s1);
 		return (l);
