@@ -14,8 +14,8 @@ int print_ptr(va_list arg)
 		return (_putstring("(nil)"));
 	}
 	n = (unsigned long int)ptr;
-	_putchar('0');
-	_putchar('x');
+	_putc('0');
+	_putc('x');
 	return (print_px(n) + 2);
 
 }
@@ -31,7 +31,7 @@ int print_px(unsigned long int n)
 	unsigned long int n1 = n;
 
 	if (n == 0)
-		return (_putchar('0'));
+		return (_putc('0'));
 	count = 0;
 	while (n > 0)
 	{
@@ -51,9 +51,9 @@ int print_px(unsigned long int n)
 	for (j = count - 1; j >= 0; j--)
 	{
 		if (hex[j] >= 10 && hex[j] < 16)
-			_putchar(hex[j] - 10 + 'a');
+			_putc(hex[j] - 10 + 'a');
 		if (hex[j] <= 9)
-			_putchar(hex[j] + '0');
+			_putc(hex[j] + '0');
 	}
 	free(hex);
 	return (count);

@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _putchar - writes the character c to stdout
+ * _putc - writes the character c to stdout
  * @c: The character to print
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-int _putchar(char c)
+int _putc(char c)
 {
 	return (write(1, &c, 1));
 }
@@ -21,7 +21,7 @@ int _putstring(char *s)
 
 	while (s[i] != '\0')
 	{
-		_putchar(s[i]);
+		_putc(s[i]);
 		i++;
 	}
 	return (i);
@@ -33,7 +33,7 @@ int _putstring(char *s)
  */
 int print_c(va_list arg)
 {
-	return (_putchar(va_arg(arg, int)));
+	return (_putc(va_arg(arg, int)));
 }
 /**
  *print_s- print string
@@ -56,5 +56,5 @@ int print_s(va_list arg)
 int print_p(va_list arg)
 {
 	(void) arg;
-	return (_putchar('%'));
+	return (_putc('%'));
 }

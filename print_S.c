@@ -29,14 +29,14 @@ int _putstring_non_print(char *s)
 	{
 		if ((s[i] < 32  && s[i] >= 0) || s[i] >= 127)
 		{
-			_putchar('\\');
-			_putchar('x');
+			_putc('\\');
+			_putc('x');
 			print_X_S(s[i]);
 			count += 4;
 		}
 		else
 		{
-			_putchar(s[i]);
+			_putc(s[i]);
 			count++;
 		}
 	}
@@ -63,9 +63,9 @@ int print_X_S(char c)
 	for (i = 1; i >= 0; i--)
 	{
 		if (arr[i] >= 10 && arr[i] < 16)
-			_putchar(arr[i] - 10 + 'A');
+			_putc(arr[i] - 10 + 'A');
 		if (arr[i] <= 9)
-			_putchar(arr[i] + '0');
+			_putc(arr[i] + '0');
 	}
 	return (0);
 }

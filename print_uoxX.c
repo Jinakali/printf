@@ -20,7 +20,7 @@ int print_u_number(unsigned int n)
 	while (place_v > 0)
 	{
 		num = n / place_v;
-		_putchar('0' + num);
+		_putc('0' + num);
 		no_c++;
 		n = n % place_v;
 		place_v = place_v / 10;
@@ -52,7 +52,7 @@ int print_o(va_list arg)
 	int i, j, count;
 
 	if (n == 0)
-		return (_putchar('0'));
+		return (_putc('0'));
 	count = 0;
 	while (n > 0)
 	{
@@ -69,7 +69,7 @@ int print_o(va_list arg)
 		n1 = n1 / 8;
 	}
 	for (j = count - 1; j >= 0; j--)
-		_putchar('0' + octal[j]);
+		_putc('0' + octal[j]);
 	free(octal);
 	return (count);
 
@@ -87,7 +87,7 @@ int print_x(va_list arg)
 	int i, j, count;
 
 	if (n == 0)
-		return (_putchar('0'));
+		return (_putc('0'));
 	count = 0;
 	while (n / 16 != 0)
 	{
@@ -108,9 +108,9 @@ int print_x(va_list arg)
 	for (j = count - 1; j >= 0; j--)
 	{
 		if (hex[j] >= 10 && hex[j] < 16)
-			_putchar(hex[j] - 10 + 'a');
+			_putc(hex[j] - 10 + 'a');
 		if (hex[j] <= 9)
-			_putchar(hex[j] + '0');
+			_putc(hex[j] + '0');
 	}
 	free(hex);
 	return (count);
@@ -128,7 +128,7 @@ int print_X(va_list arg)
 	int i, j, count;
 
 	if (n == 0)
-		return (_putchar('0'));
+		return (_putc('0'));
 	count = 0;
 	while (n / 16 != 0)
 	{
@@ -149,9 +149,9 @@ int print_X(va_list arg)
 	for (j = count - 1; j >= 0; j--)
 	{
 		if (hex[j] >= 10 && hex[j] < 16)
-			_putchar(hex[j] - 10 + 'A');
+			_putc(hex[j] - 10 + 'A');
 		if (hex[j] <= 9)
-			_putchar(hex[j] + '0');
+			_putc(hex[j] + '0');
 	}
 	free(hex);
 	return (count);

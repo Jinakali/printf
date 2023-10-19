@@ -15,7 +15,7 @@ typedef struct format
 	int (*func)(va_list args);
 } fmt;
 int _printf(const char *format, ...);
-int _putchar(char c);
+int _putc(char c);
 int print_c(va_list arg);
 int print_s(va_list arg);
 int print_p(va_list arg);

@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			no_chars_writ += _putchar(format[i]);
+			no_chars_writ += _putc(format[i]);
 		}
 		while (format[i] == '%')
 		{
@@ -66,8 +66,8 @@ int _printf(const char *format, ...)
 			}
 			if (get_con(format[i]) == NULL)
 			{
-				no_chars_writ += _putchar('%');
-				no_chars_writ += _putchar(format[i]);
+				no_chars_writ += _putc('%');
+				no_chars_writ += _putc(format[i]);
 			}
 		}
 	}

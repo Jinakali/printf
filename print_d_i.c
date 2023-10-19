@@ -12,7 +12,7 @@ int print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		_putc('-');
 		no_c++;
 		n = -1 * n;
 	}
@@ -27,7 +27,7 @@ int print_number(int n)
 	while (place_v > 0)
 	{
 		num = n / place_v;
-		_putchar('0' + num);
+		_putc('0' + num);
 		no_c++;
 		n = n % place_v;
 		place_v = place_v / 10;
