@@ -9,10 +9,10 @@ Format string: usually consists of characters to be written out as is and format
 %[$][flags][width][.precision][length modifier]format
 
 Each argument is introduced by a '%' and ends with a 'format specifier'
-Flag:not handled
-Width:not handled
-precision:not handled
-Length modifier:not handled
+* Flag:not handled
+* Width:not handled
+* precision:not handled
+* Length modifier:not handled
 
 Format:
 * c-
